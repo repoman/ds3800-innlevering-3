@@ -6,7 +6,8 @@ body {
 
 button,
 label {
-  font-family: monospace;
+    font-family: monospace;
+    cursor: pointer;
 }
 
 .section {
@@ -30,28 +31,28 @@ label {
 }
 
 .content {
-    padding: 40px;
+    padding: 20px;
     border: 1px;
     border-style: solid;
-    background-color: greenyellow;
-    margin-top: 40px;
+    background-color: lawngreen;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .stupid-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .stupid-list li {
-  border: 2px solid white;
-  border-radius: 3px;
-  padding: 20px;
-  width: auto;
-  margin-bottom: 20px;
-  background-color: #e6ffd5;
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 20px;
+    width: auto;
+    margin-bottom: 20px;
+    background-color: #e6ffd5;
 }
 
 nav {
@@ -69,9 +70,7 @@ nav:after {
 }
 
 nav button {
-    border: 1px;
-    border-style: solid;
-    background: 0;
+    border: 1px solid black;
     height: 40px;
     float: left;
     width: calc(100% / 3);
@@ -82,8 +81,7 @@ nav button {
 }
 
 nav button:hover {
-    border: 2px;
-    border-style: solid;
+    border: 2px solid black;
     cursor: pointer;
     opacity: 200%;
     background-color: darkgrey;
@@ -98,5 +96,5 @@ h1 {
 }
 
 .add-video {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
