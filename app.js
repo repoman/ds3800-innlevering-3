@@ -2,6 +2,7 @@ $(document).ready(function(e) {
     $('nav button').on('click', changeSectionClickHandler);
     $('.add-picture-button').on('click', addPictureClickHandler);
     $(".add-thing-button").on("click", addThing);
+    $(".delete-all-button").on("click", deleteAll);
 
     db = localStorage;
     renderThings();
@@ -44,16 +45,28 @@ function addThing() {
   data[id] = thing;
   db.setItem("list", JSON.stringify(data));
   renderThings();
-  console.log(db.list);
 }
 
 function renderThings() {
   var data = JSON.parse(db.getItem("list"));
   var html = "";
   for (i in data) {
-    console.log(data[i].title);
-    html = html.concat("<li><p>" + data[i].title + "</p></li>");
+    html = html.concat("<li><p>" + data[i].title + "</p><button class='remove-button' data-id=" + i + ">x</button></li>");
   }
-  console.log(html);
   $(".stupid-list").html(html);
+  $(".remove-button").on("click", function() {
+    removeThing($(this).data("id"));
+  });
+}
+
+function removeThing(id) {
+  var data = JSON.parse(db.getItem("list"));
+  delete data[id];
+  db.setItem("list", JSON.stringify(data));
+  renderThings();
+}
+
+function deleteAll() {
+  db.clear();
+  renderThings();
 }
