@@ -1,6 +1,12 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: monospace;
+}
+
+button,
+label {
+  font-family: monospace;
 }
 
 .section {
@@ -24,7 +30,7 @@ body {
 }
 
 .content {
-    padding: 5px;
+    padding: 40px;
     border: 1px;
     border-style: solid;
     background-color: greenyellow;
@@ -35,6 +41,17 @@ body {
 
 .stupid-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stupid-list li {
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 20px;
+  width: auto;
+  margin-bottom: 20px;
+  background-color: #e6ffd5;
 }
 
 nav {
@@ -60,7 +77,6 @@ nav button {
     width: calc(100% / 3);
     color: black;
     background-color: lightgrey;
-    font-family: monospace;
     font-size: 25px;
     font-weight: bold;
 }
@@ -79,4 +95,8 @@ h1 {
     font-size: 300%;
     font-family: monospace;
     font-weight: bold;
+}
+
+.add-video {
+  margin-bottom: 20px;
 }

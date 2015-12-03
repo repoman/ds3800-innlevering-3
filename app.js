@@ -6,7 +6,6 @@ $(document).ready(function(e) {
 
     db = localStorage;
     renderThings();
-    //db.clear();
 });
 
 function changeSectionClickHandler(e) {
@@ -17,17 +16,6 @@ function changeSectionClickHandler(e) {
 function changeSection(sectionName) {
     $('.active').removeClass('active');
     $('.' + sectionName).addClass('active');
-}
-
-function addPictureClickHandler(e) {
-    var url = $('.add-picture-url').val();
-    addPicture(url);
-}
-
-function addPicture(url) {
-    var html = '<img src="' + url +'" />';
-    $('section.pictures img:last').after(html);
-    $('.add-picture-url').val('');
 }
 
 function addThing() {
@@ -53,7 +41,7 @@ function renderThings() {
   var data = JSON.parse(db.getItem("list"));
   var html = "";
   for (i in data) {
-    html = html.concat("<li><div>" + parseYoutubeId(data[i].youtubeId) + "</div><p>" + data[i].title + "</p><button class='remove-button' data-id=" + i + ">x</button></li>");
+    html = html.concat("<li><div>" + parseYoutubeId(data[i].youtubeId) + "</div><p>" + data[i].title + "</p><button class='remove-button' data-id=" + i + ">Slett</button></li>");
   }
   $(".stupid-list").html(html);
   $(".remove-button").on("click", function() {
