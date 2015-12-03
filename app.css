@@ -33,6 +33,12 @@ body {
     margin-right: 10px;
 }
 
+nav {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
 nav:after {
     content: ' ';
     height: 0;
@@ -53,7 +59,6 @@ nav button {
     font-family: monospace;
     font-size: 25px;
     font-weight: bold;
-    margin-top: 10px;
 }
 
 nav button:hover {
