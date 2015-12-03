@@ -7,8 +7,6 @@ body {
     display: none;
     width: 100%;
     margin: 0 auto;
-    border: 1px;
-    border-style: solid;
 }
 
 .section.active {
@@ -16,12 +14,23 @@ body {
 }
 
 .top {
-  padding: 20px;
-  background-color: yellowgreen;
+    padding: 5px;
+    background-color: yellowgreen;
+    border: 1px;
+    border-style: solid;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .content {
-  padding: 20px;
+    padding: 5px;
+    border: 1px;
+    border-style: solid;
+    background-color: greenyellow;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 nav:after {
@@ -43,7 +52,7 @@ nav button {
     background-color: lightgrey;
     font-family: monospace;
     font-size: 25px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 nav button:hover {
@@ -52,6 +61,7 @@ nav button:hover {
     cursor: pointer;
     opacity: 200%;
     background-color: darkgrey;
+    font-size: 200%;
 }
 
 h1 {
