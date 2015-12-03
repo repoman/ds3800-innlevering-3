@@ -18,48 +18,49 @@ function changeSection(sectionName) {
 }
 
 function addThing() {
-  var data = JSON.parse(db.getItem("list"));
-  if (data === null) {
+    var data = JSON.parse(db.getItem("list"));
+    if (data === null) {
     data = {};
-  }
-  var youtubeId = $('.youtube-id').val();
-  var title = $('.title').val();
-  var id = new Date().getTime();
-  var thing = {
+}
+    var youtubeId = $('.youtube-id').val();
+    var title = $('.title').val();
+    var id = new Date().getTime();
+    var thing = {
     id: id,
     youtubeId: youtubeId,
     title: title,
     added: new Date()
-  };
-  data[id] = thing;
-  db.setItem("list", JSON.stringify(data));
-  renderThings();
+    };
+    data[id] = thing;
+    db.setItem("list", JSON.stringify(data));
+    renderThings();
 }
 
 function renderThings() {
-  var data = JSON.parse(db.getItem("list"));
-  var html = "";
-  for (i in data) {
+    var data = JSON.parse(db.getItem("list"));
+    var html = "";
+    for (i in data) {
     html = html.concat("<li><div>" + parseYoutubeId(data[i].youtubeId) + "</div><p>" + data[i].title + "</p><button class='remove-button' data-id=" + i + ">Slett</button></li>");
-  }
-  $(".stupid-list").html(html);
-  $(".remove-button").on("click", function() {
+}
+    $(".stupid-list").html(html);
+    $(".remove-button").on("click", function() {
     removeThing($(this).data("id"));
-  });
+});
 }
 
 function removeThing(id) {
-  var data = JSON.parse(db.getItem("list"));
-  delete data[id];
-  db.setItem("list", JSON.stringify(data));
-  renderThings();
+    var data = JSON.parse(db.getItem("list"));
+    delete data[id];
+    db.setItem("list", JSON.stringify(data));
+    renderThings();
 }
 
 function deleteAll() {
-  db.clear();
-  renderThings();
+    db.clear();
+    renderThings();
 }
 
 function parseYoutubeId(id) {
-  return '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
+    return '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + id + 
+    '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
 }

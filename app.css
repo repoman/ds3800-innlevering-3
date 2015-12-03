@@ -13,7 +13,7 @@ label {
 .section {
     display: none;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .section.active {
@@ -47,12 +47,12 @@ label {
 }
 
 .stupid-list li {
-    border: 2px solid white;
+    border: 1px solid black;
     border-radius: 3px;
     padding: 20px;
     width: auto;
     margin-bottom: 20px;
-    background-color: #e6ffd5;
+    background-color: darkseagreen;
 }
 
 nav {
