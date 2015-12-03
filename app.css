@@ -33,6 +33,10 @@ body {
     margin-right: 10px;
 }
 
+.stupid-list {
+  list-style: none;
+}
+
 nav:after {
     content: ' ';
     height: 0;

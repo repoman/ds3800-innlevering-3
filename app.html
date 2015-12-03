@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MyPage</title>
+    <title>YouTube favoritter</title>
     <link rel="stylesheet" href="app.css" />
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="app.js"></script>
@@ -10,18 +10,21 @@
 <body>
 
 <nav>
-    <button data-target="main">Forside</button>
-    <button data-target="pictures">Bilder</button>
-    <button data-target="bob">Bob</button>
+    <button data-target="main">Videoer</button>
+    <button data-target="pictures">Om</button>
+    <button data-target="bob">Hjelp</button>
 </nav>
 
 <section class="main section active">
   <div class="top">
-    <h1>Forside</h1>
+    <h1>Videoer</h1>
   </div>
   <div class="content">
-    <label for="thing">Ting</label>
-    <input type="text" class="thingamabob" placeholder="en ting">
+    <h2>Legg til video</h2>
+    <label for="thing">Tittel</label>
+    <input type="text" class="title" placeholder="Tittel">
+    <label for="thing">Video ID fra YouTube</label>
+    <input type="text" class="youtube-id" placeholder="YouTube id">
     <button class="add-thing-button">Legg til</button>
     <ul class="stupid-list"></ul>
     <button class="delete-all-button">Slett alle</button>
@@ -30,7 +33,7 @@
 
 <section class="pictures section">
   <div class="top">
-    <h1>Bilder</h1>
+    <h1>Om</h1>
   </div>
   <div class="content">
     <p>ting</p>
@@ -39,7 +42,7 @@
 
 <section class="bob section">
   <div class="top">
-    <h1>Bob</h1>
+    <h1>Hjelp</h1>
   </div>
   <div class="content">
     <p>lalal</p>

@@ -35,11 +35,13 @@ function addThing() {
   if (data === null) {
     data = {};
   }
-  var thingamabob = $('.thingamabob').val();
+  var youtubeId = $('.youtube-id').val();
+  var title = $('.title').val();
   var id = new Date().getTime();
   var thing = {
     id: id,
-    title: thingamabob,
+    youtubeId: youtubeId,
+    title: title,
     added: new Date()
   };
   data[id] = thing;
@@ -51,7 +53,7 @@ function renderThings() {
   var data = JSON.parse(db.getItem("list"));
   var html = "";
   for (i in data) {
-    html = html.concat("<li><p>" + data[i].title + "</p><button class='remove-button' data-id=" + i + ">x</button></li>");
+    html = html.concat("<li><div>" + parseYoutubeId(data[i].youtubeId) + "</div><p>" + data[i].title + "</p><button class='remove-button' data-id=" + i + ">x</button></li>");
   }
   $(".stupid-list").html(html);
   $(".remove-button").on("click", function() {
@@ -69,4 +71,8 @@ function removeThing(id) {
 function deleteAll() {
   db.clear();
   renderThings();
+}
+
+function parseYoutubeId(id) {
+  return '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';
 }
