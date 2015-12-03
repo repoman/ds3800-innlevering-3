@@ -1,6 +1,5 @@
 $(document).ready(function(e) {
     $('nav button').on('click', changeSectionClickHandler);
-    $('.add-picture-button').on('click', addPictureClickHandler);
     $(".add-thing-button").on("click", addThing);
     $(".delete-all-button").on("click", deleteAll);
 
