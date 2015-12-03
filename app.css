@@ -26,6 +26,6 @@ nav button {
     background: 0;
     height: 40px;
     float: left;
-    width: 50%;
+    width: calc(100% / 3);
     color: inherit;
 }
