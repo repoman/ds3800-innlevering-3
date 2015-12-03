@@ -6,16 +6,22 @@ body {
 .section {
     display: none;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: yellowgreen;
-    height: auto;
+    margin: 0 auto;
     border: 1px;
     border-style: solid;
 }
 
 .section.active {
     display: block;
+}
+
+.top {
+  padding: 20px;
+  background-color: yellowgreen;
+}
+
+.content {
+  padding: 20px;
 }
 
 nav:after {
